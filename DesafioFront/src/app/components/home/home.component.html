@@ -52,7 +52,19 @@
       have to say...
     </p>
     <div class="carousel">
-      <button (click)="prev()" [disabled]="currentIndex === 0">Left</button>
+      <button (click)="prev()" [disabled]="currentIndex === 0">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+        >
+          <path
+            fill="currentColor"
+            d="M14.59 7.41L10.17 12l4.42 4.59L12.17 18l-6-6 6-6 1.42 1.41z"
+          />
+        </svg>
+      </button>
 
       <div class="cards-container">
         <div *ngFor="let card of visibleCards()" class="card">
@@ -63,7 +75,17 @@
       </div>
 
       <button (click)="next()" [disabled]="currentIndex + 3 >= cards.length">
-        Right
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+        >
+          <path
+            fill="currentColor"
+            d="M9.41 16.59L13.83 12 9.41 7.41 10.83 6 15.41 10.59 16.83 12 15.41 13.41 10.83 18z"
+          />
+        </svg>
       </button>
     </div>
   </div>
