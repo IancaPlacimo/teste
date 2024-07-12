@@ -1,0 +1,70 @@
+<div class="home">
+  <div class="destination">
+    <div class="text">
+      <p class="title">
+        Travel to
+        <br />
+        your dream
+        <br />
+        destination
+      </p>
+      <p class="subtitle">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <br />
+        Error aut numquam inventore, eligendi asperiores temporibus distinctio.
+        <br />
+        Minus, exercitationem assumenda perspiciatis, dolor animi saepe non.
+      </p>
+
+      <button class="button-reserve">Reserve Ticket</button>
+    </div>
+
+    <img
+      src="../../../assets/img/img-montanhas.svg"
+      style="width: 50%"
+      alt=""
+    />
+  </div>
+
+  <div class="anywhere">
+    <div class="text">
+      <p class="title">
+        Choose anywhere
+        <br />
+        you'd like to be
+      </p>
+      <div *ngFor="let card of cardsC">
+        <p *ngIf="card.show" class="subtitle">
+          <br />
+          <b>{{ card.title }}</b>
+          <br />
+          {{ card.content }}
+        </p>
+      </div>
+    </div>
+    <img src="../../../assets/img/img-homem.svg" style="width: 45%" alt="" />
+  </div>
+
+  <div class="depositions">
+    <p class="title">
+      Here's what they
+      <br />
+      have to say...
+    </p>
+    <div class="carousel">
+      <button (click)="prev()" [disabled]="currentIndex === 0">Left</button>
+
+      <div class="cards-container">
+        <div *ngFor="let card of visibleCards()" class="card">
+          <img [src]="card.image" alt="{{ card.title }}" />
+          <h2>{{ card.title }}</h2>
+          <p>{{ card.content }}</p>
+        </div>
+      </div>
+
+      <button (click)="next()" [disabled]="currentIndex + 3 >= cards.length">
+        Right
+      </button>
+    </div>
+  </div>
+</div>
