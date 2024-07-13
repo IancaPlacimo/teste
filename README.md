@@ -28,15 +28,17 @@ Certifique-se de ter os seguintes requisitos instalados no seu sistema:
    
 2. **Navegue até o diretório do projeto:**
    
+   cd teste
+   depois
    cd DesafioFront
 
-3. **Instale as dependências:**
+4. **Instale as dependências:**
    
    npm install
    ou
    yarn install
 
-4. **Rodando o Projeto**
+5. **Rodando o Projeto**
    
    Execute o seguinte comando para iniciar o projeto:
    
