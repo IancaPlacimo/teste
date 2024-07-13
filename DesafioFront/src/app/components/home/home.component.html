@@ -67,10 +67,17 @@
       </button>
 
       <div *ngIf="carouselData" class="cards-container">
-        <div *ngFor="let slide of carouselData" class="card">
-          <img src="../../../assets/img/person.png" alt="{{ slide.title }}" />
-          <h2>{{ slide.title }}</h2>
-          <p>{{ slide.content }}</p>
+        <div class="card-wrapper">
+          <div
+            *ngFor="
+              let slide of carouselData.slice(currentIndex, currentIndex + 3)
+            "
+            class="card"
+          >
+            <img src="../../../assets/img/person.png" alt="{{ slide.title }}" />
+            <h2>{{ slide.title }}</h2>
+            <p>{{ slide.content }}</p>
+          </div>
         </div>
       </div>
 

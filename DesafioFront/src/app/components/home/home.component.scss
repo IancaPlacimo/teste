@@ -117,65 +117,54 @@ $color-clara: #e9e7e7;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-}
 
-.cards-container {
-  display: flex;
-  overflow: hidden;
-  width: 90%;
-}
+  .cards-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Ajustado para ocupar todo o espaço disponível */
+  }
 
-.cards-container h2 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 18px;
-  letter-spacing: -1px;
-  color: $color-escura;
-  font-weight: 900;
-  font-family: $font-family-base;
-  text-align: center;
-}
+  .card-wrapper {
+    display: flex;
+    transition: transform 0.5s ease; /* Adiciona transição para suavizar a mudança de slides */
+  }
 
-.card {
-  cursor: pointer;
-  flex: 1 0 31.5%;
-  border: 3px solid $color-escura;
-  border-radius: 10px;
-  padding: 25px;
-  margin: 0 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  text-align: center;
-}
+  .card {
+    cursor: pointer;
+    flex: 0 0 31.5%; /* Ajustado para mostrar 3 cards por vez */
+    margin: 0 8px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 3px solid $color-escura;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease; /* Adiciona transição para suavizar a mudança de slides */
+  }
 
-.card img {
-  max-width: 50%;
-  height: auto;
-  border-radius: 4px;
-}
+  button {
+    background-color: $color-clara;
+    border: none;
+    color: $color-escura;
+    font-weight: 900;
+    border: 3px solid $color-escura;
+    padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
 
-button {
-  background-color: $color-clara;
-  border: none;
-  color: $color-escura;
-  font-weight: 900;
-  border: 3px solid $color-escura;
-  padding: 10px;
-  margin: 0 10px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-button:disabled {
-  background-color: $color-clara;
-  cursor: not-allowed;
+  button:disabled {
+    background-color: $color-clara;
+    cursor: not-allowed;
+  }
 }
 
 @media (max-width: 1200px) {
   .card {
     cursor: pointer;
-    flex: 1 0 95%;
-    max-width: 330px;
+    flex: 1 0 95% !important;
+    max-width: 230px;
   }
   .home,
   .anywhere,

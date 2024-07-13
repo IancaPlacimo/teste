@@ -71,18 +71,29 @@ export class HomeComponent {
   }
 
   getCarouselData(): void {
-    this.carouselService.getCarouselData().subscribe((data) => {
-      this.carouselData = data;
-    });
+    this.carouselService.getCarouselData().subscribe(
+      (data) => {
+        this.carouselData = data;
+        console.log('Dados do carrossel:', this.carouselData);
+      },
+      (error) => {
+        console.error('Erro ao obter dados do carrossel:', error);
+      }
+    );
   }
 
   next(): void {
-    this.currentIndex = (this.currentIndex + 1) % this.carouselData.length;
+    if (this.carouselData.length > 0) {
+      this.currentIndex =
+        (this.currentIndex + 1) % (this.carouselData.length - 2); // Subtrai 2 para garantir que haja itens suficientes para exibir
+    }
   }
 
   prev(): void {
-    this.currentIndex =
-      (this.currentIndex - 1 + this.carouselData.length) %
-      this.carouselData.length;
+    if (this.carouselData.length > 0) {
+      this.currentIndex =
+        (this.currentIndex - 1 + this.carouselData.length) %
+        (this.carouselData.length - 2); // Subtrai 2 para garantir que haja itens suficientes para exibir
+    }
   }
 }
