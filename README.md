@@ -44,5 +44,5 @@ Certifique-se de ter os seguintes requisitos instalados no seu sistema:
    ou
    yarn start
 
-   Isso iniciará o projeto localmente. Acesse **http://localhost:3000** no seu navegador para visualizar a tela.
+   Isso iniciará o projeto localmente. Acesse **http://localhost:4200** no seu navegador para visualizar a tela.
    
