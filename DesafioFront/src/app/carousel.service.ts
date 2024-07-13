@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CarouselService {
-  private apiUrl = 'https://api-desafio-front.vercel.app/api/data';
+  private apiUrl =
+    'https://6692a64d346eeafcf46db31d.mockapi.io/api/data/comentarios';
 
   constructor(private http: HttpClient) {}
 

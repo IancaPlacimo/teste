@@ -94,7 +94,7 @@ $color-clara: #e9e7e7;
 
   .depositions {
     max-width: 1400px;
-    padding: 0px 200px 20px 200px;
+    padding: 0px 180px 20px 180px;
     margin-bottom: 20px;
 
     .title {
@@ -138,7 +138,7 @@ $color-clara: #e9e7e7;
 
 .card {
   cursor: pointer;
-  flex: 1 0 31%;
+  flex: 1 0 31.5%;
   border: 3px solid $color-escura;
   border-radius: 10px;
   padding: 25px;
@@ -147,12 +147,6 @@ $color-clara: #e9e7e7;
   box-sizing: border-box;
   text-align: center;
 }
-
-// .card:hover {
-//   transform: scale(1.02); /* Aumenta o tamanho do card */
-//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra maior */
-//   border-color: $color-escura; /* Muda a cor do border ao passar o mouse */
-// }
 
 .card img {
   max-width: 50%;
