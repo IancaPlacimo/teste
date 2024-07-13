@@ -33,7 +33,7 @@ Certifique-se de ter os seguintes requisitos instalados no seu sistema:
 3. **Instale as dependências:**
    
    npm install
-   # ou
+   ou
    yarn install
 
 4. **Rodando o Projeto**
@@ -41,12 +41,8 @@ Certifique-se de ter os seguintes requisitos instalados no seu sistema:
    Execute o seguinte comando para iniciar o projeto:
    
    npm start
-   # ou
+   ou
    yarn start
 
    Isso iniciará o projeto localmente. Acesse **http://localhost:3000** no seu navegador para visualizar a tela.
-
-   
-   
-   Execute o seguinte comando para iniciar o projeto:
    
