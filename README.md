@@ -24,7 +24,7 @@ Certifique-se de ter os seguintes requisitos instalados no seu sistema:
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/seu-projeto.git
+   git clone https://github.com/IancaPlacimo/teste.git
    
 2. **Navegue até o diretório do projeto:**
    
