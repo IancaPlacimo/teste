@@ -33,10 +33,10 @@
         <br />
         you'd like to be
       </p>
-      <div *ngFor="let card of cardsC">
+      <div class="card1" *ngFor="let card of cardsC">
         <p *ngIf="card.show" class="subtitle">
           <br />
-          <b>{{ card.title }}</b>
+          <b class="title-anywhere">{{ card.title }}</b>
           <br />
           {{ card.content }}
         </p>
@@ -66,15 +66,15 @@
         </svg>
       </button>
 
-      <div class="cards-container">
-        <div *ngFor="let card of visibleCards()" class="card">
-          <img [src]="card.image" alt="{{ card.title }}" />
-          <h2>{{ card.title }}</h2>
-          <p>{{ card.content }}</p>
+      <div *ngIf="carouselData" class="cards-container">
+        <div *ngFor="let slide of carouselData" class="card">
+          <img [src]="slide.imageURL" alt="{{ slide.title }}" />
+          <h2>{{ slide.title }}</h2>
+          <p>{{ slide.content }}</p>
         </div>
       </div>
 
-      <button (click)="next()" [disabled]="currentIndex + 3 >= cards.length">
+      <button (click)="next()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

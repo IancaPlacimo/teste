@@ -65,8 +65,18 @@ $color-clara: #e9e7e7;
     align-items: center;
     background-color: $color-escura;
 
+    .card1 {
+      margin-top: 10px;
+    }
+
+    .title-anywhere {
+      font-size: 20px;
+      margin-bottom: 10px !important;
+    }
+
     .text {
       .title {
+        margin-bottom: 50px;
         font-size: 55px;
         letter-spacing: -1px;
         line-height: 55px;
@@ -77,7 +87,7 @@ $color-clara: #e9e7e7;
 
       .subtitle {
         color: $color-clara;
-        max-width: 80%;
+        max-width: 70%;
       }
     }
   }
