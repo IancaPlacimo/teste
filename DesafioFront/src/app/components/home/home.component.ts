@@ -63,6 +63,7 @@ export class HomeComponent {
   //   },
   // ];
   carouselData: any[] = [];
+  cards: any[] = [];
   currentIndex = 0;
   constructor(private carouselService: CarouselService) {}
 
@@ -74,7 +75,9 @@ export class HomeComponent {
     this.carouselService.getCarouselData().subscribe(
       (data) => {
         this.carouselData = data;
+        this.cards = data;
         console.log('Dados do carrossel:', this.carouselData);
+        console.log('Dcard:', this.cards);
       },
       (error) => {
         console.error('Erro ao obter dados do carrossel:', error);

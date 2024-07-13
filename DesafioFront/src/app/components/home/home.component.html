@@ -75,8 +75,8 @@
             class="card"
           >
             <img src="../../../assets/img/person.png" alt="{{ slide.title }}" />
-            <h2>{{ slide.title }}</h2>
-            <p>{{ slide.content }}</p>
+            <h2 class="title-card">{{ slide.title }}</h2>
+            <p class="subtitle-card">{{ slide.content }}</p>
           </div>
         </div>
       </div>
@@ -94,6 +94,22 @@
           />
         </svg>
       </button>
+    </div>
+
+    <div class="cards-mobile">
+      <div *ngIf="carouselData" class="cards-container">
+        <div class="card-wrapper">
+          <div *ngFor="let slide of carouselData" class="card">
+            <img
+              style="margin-bottom: 20px"
+              src="../../../assets/img/person.png"
+              alt="{{ slide.title }}"
+            />
+            <h2 class="title-card">{{ slide.title }}</h2>
+            <p class="subtitle-card">{{ slide.content }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
