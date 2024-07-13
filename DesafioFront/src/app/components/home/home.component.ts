@@ -8,7 +8,9 @@ import { CarouselService } from '../../carousel.service';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  cardsC = [
+  carouselData: any[] = [];
+  currentIndex = 0;
+  cards = [
     {
       id: 1,
       title: 'Lorem Ipsun Dolor',
@@ -25,46 +27,6 @@ export class HomeComponent {
     },
   ];
 
-  //   {
-  //     id: 1,
-  //     title: 'Ianca Placimo',
-  //     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
-  //     image: '../../../assets/img/person.png',
-  //   },
-  //   {
-  //     id: 2,
-  //     title: 'Andreas Delucca',
-  //     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
-  //     image: '../../../assets/img/person.png',
-  //   },
-  //   {
-  //     id: 3,
-  //     title: 'Kang Inhey',
-  //     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
-  //     image: '../../../assets/img/person.png',
-  //   },
-  //   {
-  //     id: 4,
-  //     title: 'Vincenzo Cassano',
-  //     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
-  //     image: '../../../assets/img/person.png',
-  //   },
-  //   {
-  //     id: 5,
-  //     title: 'Kang He-In',
-  //     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
-  //     image: '../../../assets/img/person.png',
-  //   },
-  //   {
-  //     id: 6,
-  //     title: 'Miles Morales',
-  //     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
-  //     image: '../../../assets/img/person.png',
-  //   },
-  // ];
-  carouselData: any[] = [];
-  cards: any[] = [];
-  currentIndex = 0;
   constructor(private carouselService: CarouselService) {}
 
   ngOnInit(): void {
@@ -75,9 +37,7 @@ export class HomeComponent {
     this.carouselService.getCarouselData().subscribe(
       (data) => {
         this.carouselData = data;
-        this.cards = data;
-        console.log('Dados do carrossel:', this.carouselData);
-        console.log('Dcard:', this.cards);
+        console.log('Dados do carrossel carregados com sucesso !!');
       },
       (error) => {
         console.error('Erro ao obter dados do carrossel:', error);

@@ -1,8 +1,4 @@
-$font-family-base: "Lato", sans-serif;
-$font-family-title: "Cardo", sans-serif;
-$font-size-base: 21px;
-$color-escura: #232323;
-$color-clara: #e9e7e7;
+@import "../../../styles";
 
 .home {
   padding-bottom: 40px;
@@ -10,7 +6,7 @@ $color-clara: #e9e7e7;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $color-clara;
+  background-color: $color-white;
 
   .destination {
     max-width: 1200px;
@@ -25,7 +21,7 @@ $color-clara: #e9e7e7;
         font-size: 80px;
         letter-spacing: -2px;
         line-height: 80px;
-        color: $color-escura;
+        color: $color-black;
         font-weight: 700;
         font-family: $font-family-title;
       }
@@ -45,11 +41,11 @@ $color-clara: #e9e7e7;
         width: 256px;
         height: 54px;
         border-radius: 5px;
-        background-color: $color-escura;
+        background-color: $color-black;
         margin-top: 40px;
         font-size: $font-size-base;
         letter-spacing: -1px;
-        color: $color-clara;
+        color: $color-white;
         font-weight: 900;
         font-family: $font-family-base;
         text-align: center;
@@ -64,7 +60,7 @@ $color-clara: #e9e7e7;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $color-escura;
+    background-color: $color-black;
 
     .card1 {
       margin-top: 10px;
@@ -81,13 +77,13 @@ $color-clara: #e9e7e7;
         font-size: 55px;
         letter-spacing: -1px;
         line-height: 55px;
-        color: $color-clara;
+        color: $color-white;
         font-weight: 700;
         font-family: $font-family-title;
       }
 
       .subtitle {
-        color: $color-clara;
+        color: $color-white;
         max-width: 70%;
       }
     }
@@ -104,7 +100,7 @@ $color-clara: #e9e7e7;
       font-size: 75px;
       letter-spacing: -2px;
       line-height: 81px;
-      color: $color-escura;
+      color: $color-black;
       font-weight: 700;
       font-family: $font-family-title;
       text-align: center;
@@ -122,7 +118,7 @@ $color-clara: #e9e7e7;
   .cards-container {
     display: flex;
     overflow: hidden;
-    width: 100%; /* Ajustado para ocupar todo o espaço disponível */
+    width: 100%;
   }
 
   .card-wrapper {
@@ -136,19 +132,19 @@ $color-clara: #e9e7e7;
     margin: 0 8px;
     box-sizing: border-box;
     text-align: center;
-    border: 3px solid $color-escura;
+    border: 3px solid $color-black;
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease; /* Adiciona transição para suavizar a mudança de slides */
+    transition: transform 0.5s ease;
   }
 
   button {
-    background-color: $color-clara;
+    background-color: $color-white;
     border: none;
-    color: $color-escura;
+    color: $color-black;
     font-weight: 900;
-    border: 3px solid $color-escura;
+    border: 3px solid $color-black;
     padding: 10px;
     margin: 0 10px;
     cursor: pointer;
@@ -156,7 +152,7 @@ $color-clara: #e9e7e7;
   }
 
   button:disabled {
-    background-color: $color-clara;
+    background-color: $color-white;
     cursor: not-allowed;
   }
 }
@@ -167,7 +163,7 @@ $color-clara: #e9e7e7;
 
 .title-card {
   font-family: $font-family-base;
-  color: $color-escura;
+  color: $color-black;
   font-weight: 900;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -259,7 +255,7 @@ $color-clara: #e9e7e7;
         margin: 0 8px;
         box-sizing: border-box;
         text-align: center;
-        border: 3px solid $color-escura;
+        border: 3px solid $color-black;
         border-radius: 10px;
         padding: 25px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

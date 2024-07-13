@@ -1,10 +1,7 @@
-$font-family-base: "Lato", sans-serif;
-$font-size-header: 21px;
-$color-escura: #232323;
-$color-clara: #e9e7e7;
+@import "../../../styles";
 
 header {
-  background-color: $color-clara;
+  background-color: $color-white;
 
   .header {
     padding: 20px 5%;
@@ -15,12 +12,13 @@ header {
     font-family: $font-family-base;
     max-width: 1200px;
     margin: 0 auto;
+
     &__link {
       cursor: pointer;
       display: flex;
       flex-direction: row;
-      color: $color-escura;
-      font-size: $font-size-header;
+      color: $color-black;
+      font-size: $font-size-base;
       gap: 20px;
     }
 
@@ -29,38 +27,36 @@ header {
       width: auto;
       padding: 10px 20px;
       border-radius: 5px;
-      background-color: $color-clara;
-      border: 3px solid #232323;
-      font-size: $font-size-header;
+      background-color: $color-white;
+      border: 3px solid $color-black;
+      font-size: $font-size-base;
       letter-spacing: -1px;
-      color: $color-escura;
+      color: $color-black;
       font-weight: 900;
       text-align: center;
     }
-  }
-}
 
-@media (max-width: 920px) {
-  header .header {
-    padding: 20px 0px;
-    flex-direction: column;
+    // Responsividade para telas menores que 920px
+    @media (max-width: 920px) {
+      padding: 20px 0px;
+      flex-direction: column;
 
-    &__link {
-      margin-top: 20px;
+      &__link {
+        margin-top: 20px;
+      }
+
+      &__button {
+        margin-top: 40px;
+      }
     }
 
-    &__button {
-      margin-top: 40px;
+    // Responsividade para telas maiores ou iguais a 768px
+    @media (min-width: 768px) {
+      padding: 50px 200px;
+
+      &__link {
+        gap: 40px;
+      }
     }
-  }
-}
-
-@media (min-width: 768px) {
-  header .header {
-    padding: 50px 200px;
-  }
-
-  header .header__link {
-    gap: 40px;
   }
 }

@@ -1,11 +1,15 @@
+// Variáveis
+$font-family-base: "Lato", sans-serif;
+$font-size-base: 21px;
+$color-black: #232323;
+$color-white: #e9e7e7;
+$font-family-title: "Cardo", sans-serif;
+
 .body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  // margin: 0;
-  // padding: 0;
-  // min-width: 100% !important;
   background-color: #e9e7e7;
 }
